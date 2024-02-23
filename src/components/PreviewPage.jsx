@@ -1,8 +1,12 @@
-// src/components/PreviewPage.jsx
 import React from 'react';
-import '../styles/style.css'; // Adjust the path as necessary
+import '../styles/style.css'; // Ensure the path is correct based on your project structure
 
 function PreviewPage({ formData }) {
+  // Function to trigger printing
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <div className="resume">
       <div className="header">
@@ -24,6 +28,7 @@ function PreviewPage({ formData }) {
         <h2>Skills</h2>
         <p>{formData.skills}</p>
       </div>
+      <button onClick={handlePrint} className="print-button">Print Resume</button>
     </div>
   );
 }

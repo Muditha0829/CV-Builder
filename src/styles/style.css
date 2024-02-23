@@ -53,4 +53,25 @@ ul {
         width: 210mm;
         height: 297mm;
     }
+
+    .print-button {
+        display: none;
+      }
+    
+     .resume {
+        box-shadow: none;
+        width: auto;
+        height: auto;
+    }
 }
+
+.print-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
