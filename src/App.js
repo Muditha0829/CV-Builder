@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import FormPage from './components/FormPage';
+import PreviewPage from './components/PreviewPage';
 
 function App() {
+  const [formData, setFormData] = useState({});
+
+  const handleFormDataSubmit = (data) => {
+    setFormData(data);
+    // If you're manually handling navigation, you might navigate to the preview page here
+    // For example, using the navigate function from useNavigate hook in React Router v6
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Form</Link>
+            </li>
+            <li>
+              <Link to="/preview">Preview</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<FormPage onFormDataSubmit={handleFormDataSubmit} />} />
+          <Route path="/preview" element={<PreviewPage formData={formData} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

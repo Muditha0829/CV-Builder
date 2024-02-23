@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.resume {
+    width: 794px; /* A4 width in pixels */
+    height: 1122px; /* A4 height in pixels */
+    margin: auto;
+    background: #fff;
+    padding: 40px; /* Adjust padding as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    page-break-after: always;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+.header p {
+    color: #888;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.section h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 3px;
+    font-size: 20px; /* Adjust font size as needed */
+}
+
+.contact-info p, .section p, .section ul {
+    margin: 10px 0;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+ul {
+    padding-left: 20px;
+}
+
+@media print {
+    body, html {
+        background: #fff;
+        width: 210mm;
+        height: 297mm;
+    }
+    .resume {
+        box-shadow: none;
+        margin: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+}
