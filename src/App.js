@@ -16,14 +16,6 @@ function App() {
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Form</Link>
-            </li>
-            <li>
-              <Link to="/preview">Preview</Link>
-            </li>
-          </ul>
         </nav>
         <Routes>
           <Route path="/" element={<FormPage onFormDataSubmit={handleFormDataSubmit} />} />
