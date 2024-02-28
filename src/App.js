@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FormPage from './components/FormPage';
 import PreviewPage from './components/PreviewPage';
+import Test from './components/Test';
 
 function App() {
   const [formData, setFormData] = useState({});
@@ -18,7 +19,8 @@ function App() {
         <nav>
         </nav>
         <Routes>
-          <Route path="/" element={<FormPage onFormDataSubmit={handleFormDataSubmit} />} />
+          <Route path="/" element={<Test/>}/>
+          {/* <Route path="/" element={<FormPage onFormDataSubmit={handleFormDataSubmit} />} /> */}
           <Route path="/preview" element={<PreviewPage formData={formData} />} />
         </Routes>
       </div>
